@@ -1,0 +1,480 @@
+@import url('font-awesome.css');
+@font-face {
+	src: url('../fonts/OpenSans-Regular.ttf');
+	font-family: open sans;
+}
+/* ---------------------------------------------------------------------------- */
+/* ------------------------------------Reset----------------------------------- */
+/* ---------------------------------------------------------------------------- */
+a,abbr,acronym,address,applet,article,aside,audio,b,blockquote,big,body,center,canvas,caption,cite,code,command,datalist,dd,del,details,dfn,dl,div,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,keygen,label,legend,li,meter,nav,object,ol,output,p,pre,progress,q,s,samp,section,small,span,source,strike,strong,sub,sup,table,tbody,tfoot,thead,th,tr,tdvideo,tt,u,ul,var{background:transparent;border:0 none;font-size:100%;margin:0;padding:0;border:0;outline:0;vertical-align:top;}ol, ul {list-style:none;}blockquote, q {quotes:none;}table, table td {padding:0;border:none;border-collapse:collapse;}img {vertical-align:top;}embed {vertical-align:top;}
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
+mark, rp, rt, ruby, summary, time {display:inline;}
+input, textarea {border:0; padding:0; margin:0; outline: 0;}
+iframe {border:0; margin:0; padding:0;}
+input, textarea, select {margin:0; padding:0px;}
+
+
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+a{color: #4C4C4C;text-decoration: none;}
+a:hover {opacity: 0.9; text-decoration: none;}
+
+h1, h2 	{font-size: 25px;line-height: 30px;}
+h3, h4	{font-size: 20px;line-height: 20px;}
+h5, h6	{font-size: 16px;line-height: 16px;}
+h1, h2, h3, h4, h5, h6{line-height: 1.2}
+
+p{margin: 10px 0;}
+
+.clearfix:before,
+.clearfix:after {
+content: " ";
+display: table;
+}
+
+.clearfix:after {
+clear: both;
+}
+/* ---------------------------------------------------------------------------- */
+/* ----------------------------------Carousel---------------------------------- */
+/* ---------------------------------------------------------------------------- */
+.owl-controls .owl-buttons div {
+	position: absolute;
+	color:#777;
+	opacity: 0.7;
+}
+.owl-carousel:hover .owl-buttons div {
+	color:#fff;
+}
+.owl-controls .owl-buttons .owl-prev {
+	left: 10px;
+	top: 50%;
+}
+.owl-controls .owl-buttons .owl-next {
+	right: 10px;
+	top: 50%;
+}
+.owl-carousel{
+	margin-bottom: 20px;
+}
+.owl-carousel .owl-buttons div i {
+	font-size: 40px;
+	margin: -20px 0 0;
+}
+.owl-wrapper .item img{
+        width: 100%;
+    }
+/* ---------------------------------------------------------------------------- */
+#myImg,#myImg02,#myImg03,#myImg04 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover,#myImg02:hover,#myImg03:hover,#myImg04:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption,#caption02,#caption03,#caption04 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption, #caption02, #caption03, #caption04 { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}	
+/* ---------------------------------------------------------------------------- */
+
+body{
+	font-family: arial;
+	background-color: #252527;
+	padding: 0 2%;
+}
+.container{
+	max-width: 1350px;
+	margin: 0 auto;
+}
+.blck li a {
+	color: black;
+}
+nav ul{
+	float: right ;
+}
+nav ul li{
+	float: left;
+	position: relative;
+}
+nav ul li a{
+	padding: 17px;
+	display: block;
+	margin-right: 1px;
+	font-weight: 900;
+	display: inline-block;
+	color: white;
+	transition: all ease-in-out 0.50s;
+}
+nav ul li a:hover, nav ul li.current a{
+	background-color: #f44336;
+	border-radius: 3px;
+	box-shadow: 10px 10px 20px white;
+}
+nav ul li span{
+	position: absolute;	
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 0;
+	display: inline-block;
+	opacity: 0;
+	transition: all ease-in-out 1s;
+	border: 3px solid darkgreen;
+	box-sizing: border-box;
+}
+.slider img{
+	height: 300px;	
+}
+nav ul li:hover span{
+	height: 100%;
+	width: 100%;
+	opacity: 1;	
+}
+.backwide{
+	background-color: #fff;
+}
+.top{
+	padding: 2%;
+}
+.logo{
+	float: left;
+}
+.search {
+	float: right;
+}
+.search input{
+	width: 260px;
+	height: 45px;
+	border: 1px solid #444444;
+	padding: 10px;
+	background: url(../img/search-dark.png) no-repeat 230px  center;
+}
+.image{
+	width: 25%;
+	float: left;
+	position: relative;
+}
+.image img{
+	width: 100%;
+}
+.image span{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	border: 3px solid black;
+	height: 0%;
+	box-sizing: border-box;
+	opacity: 0;
+	color: white;
+	font-weight: 900;
+	text-align: center;
+	transition: all ease-in-out 1s;
+}
+.image:hover span{
+	height: 100%;
+	width: 100%;
+	padding-top: 50%;
+	opacity: 1;
+}
+.stuff-txt {
+	text-align: center;
+	color: #333333;
+}
+.stuff-txt h2{
+	font-size: 32px;
+}
+.stuff-txt p{
+	font-size: 16px;
+}
+.stuff-area{
+	width: 23%;
+	float: left;
+	text-align: center;
+	margin-right: 2.6%;
+}
+.stuff-area:last-child{
+	margin-right: 0;
+}
+h2{
+	margin: 20px 0;
+	font-size: 28px;
+	color: #333333;
+}
+.stuff-area p{
+	font-size: 17px;
+	color: #333333;
+}
+.stuff-area a{
+	padding: 16px;
+	background-color: #f44336;
+	display: inline-block;
+	border-radius: 23px;
+	color: white;
+	margin: 20px 0;
+	transition: all ease-in-out 0.20s;
+}
+.stuff-area a:hover{
+	box-shadow: 10px 10px 30px grey;
+}
+section {
+	color: #333333;
+	padding-bottom: 120px;
+}
+article{
+	width: 65%;
+	float: left;
+	margin-right: 5%;
+}
+aside{
+	width: 30%;
+	float: right;
+}
+article h1{
+	font-size: 35px;
+	margin-top: 28px;
+}
+article h6{
+	font-size: 28px;
+	margin-top: 38px;
+	margin-bottom: 20px;
+}
+article span{
+	font-size: 16px;
+	font-weight: bold;
+}
+article strong{
+	color: #f44336;
+}
+article p{
+	font-size: 18px;
+	line-height: 24px;
+	margin: 30px 0;
+}
+article a{
+	padding: 16px;
+	background-color: #f44336;
+	display: inline-block;
+	border-radius: 23px;
+	color: white;
+	margin: 20px 0;
+	transition: all ease-in-out 0.20s;
+}
+article a:hover{
+	box-shadow: 10px 10px 30px grey;
+}
+.bdr{
+	height: 1px;
+	background-color: #dddddd;
+	margin: 40px 0 5px;
+}
+aside h3{
+	font-size: 24px;
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+aside h4{
+	font-size: 24px;
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+aside ul li p{
+	font-size: 17px;
+	line-height: 22px;
+	margin-top: 35px;
+}
+.one-third{
+	width: 30%;
+	float: left;
+	margin-right: 5%;	
+	padding: 20px 0;
+	line-height: 40px;
+	text-align: center;
+	color: white;
+}
+.one-third:last-child{
+	margin-right: 0;
+}
+.one-third i {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #f44336;
+	display: inline-block;
+	border-radius: 50px;
+}
+.one-third span{
+	text-decoration: underline;
+	padding-left: 10px;
+}
+@media only screen and (max-width: 1127px){
+	.stuff-area{
+		width: 45%;
+		margin-left: 2%;
+	}
+	.stuff-area img{
+		width: 100%;
+	}
+	article {
+		width: 100%;
+		text-align: center;
+	}
+	aside{
+		width: 100%;
+		text-align: center;
+	}
+	.image{
+		width: 45%;
+		margin-left: 3%;
+		margin-top: 3%;
+		font-size: 44px;
+	}
+	.image:hover span{
+		padding-top: 44%;
+	}
+
+	.image img{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 786px){
+	.stuff-area{
+		width: 70%;
+		margin-left: 15%;
+	}
+	.stuff-area img{
+		width: 100%;
+	}
+	.image{
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 5%;
+		font-size: 30px;
+	}
+	.image:hover span{
+		padding-top: 44%;
+	}
+	.image img{
+		width: 100%;
+	}
+	input{
+		margin: 30px 0;
+	}
+	nav ul li {
+		margin-bottom: 20px;t
+		text-align: center;
+		margin-left:2px;
+	}
+	nav#myDIV{
+		position: absolute;
+		display: none;
+		background-color: black;
+		width: 60%;
+		z-index: 1;
+		top: 40px;
+		text-align: center;
+		right: 40px;
+	}
+	nav#myDIV ul li{
+		width: 100%;
+	}	
+	nav ul li.alert{
+		background-color: transparent;
+	}
+	.icon{
+		display: block !important;
+		position: absolute;
+		right: 50px;
+		top: 10px;
+	}
+
+}
